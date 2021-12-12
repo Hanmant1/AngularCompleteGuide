@@ -14,6 +14,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from '../app/shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { ReciepeService } from './reciepes/reciepe.service';
+import { AppRoutingModule } from './app.routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ReciepeService } from './reciepes/reciepe.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService,ReciepeService],
   bootstrap: [AppComponent]
