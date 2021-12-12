@@ -8,7 +8,6 @@ import { ReciepeService } from '../reciepe.service';
   styleUrls: ['./reciepe-list.component.css']
 })
 export class ReciepeListComponent implements OnInit {
-  @Output() reciepeWasRecieved = new EventEmitter<Reciepe>();
   reciepes: Reciepe[];
   constructor(private reciepeService: ReciepeService) {
     console.log(this.reciepes);
@@ -17,9 +16,4 @@ export class ReciepeListComponent implements OnInit {
   ngOnInit() {
     this.reciepes = this.reciepeService.getReciepes();
   }
-
-  onReceipeSelected(reciepe: Reciepe) {
-    this.reciepeWasRecieved.emit(reciepe);
-  }
-
 }

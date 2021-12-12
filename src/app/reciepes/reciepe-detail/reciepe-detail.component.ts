@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Reciepe } from '../reciepe.model';
+import { ReciepeService } from '../reciepe.service';
 @Component({
   selector: 'app-reciepe-detail',
   templateUrl: './reciepe-detail.component.html',
@@ -7,9 +8,12 @@ import { Reciepe } from '../reciepe.model';
 })
 export class ReciepeDetailComponent implements OnInit {
   @Input() reciepe: Reciepe;
-  constructor() { }
+  constructor(private reciepeService: ReciepeService) { }
 
   ngOnInit() {
   }
 
+  onAddToShoppingList(){
+    this.reciepeService.addIngredientToShoppingList(this.reciepe.ingredient)
+  }
 }
