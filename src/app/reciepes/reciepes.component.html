@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-reciepe-list (reciepeWasRecieved)="selectedReciepe = $event"></app-reciepe-list>
+  </div>
+  <div class="col-md-5">
+    <app-reciepe-detail 
+    *ngIf="selectedReciepe; else infoText" [reciepe]="selectedReciepe"></app-reciepe-detail>
+    <ng-template #infoText>
+      <p>Please select a Reciepe!</p>
+    </ng-template>
+  </div>
+</div>
