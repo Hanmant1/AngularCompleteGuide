@@ -1,12 +1,10 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Ingredient } from "../shared/ingredient.model";
 import { Reciepe } from "./reciepe.model";
 
 @Injectable()
 export class ReciepeService {
-  
-    receipeSelected = new EventEmitter<Reciepe>();
     private reciepes: Reciepe[] = [
         new Reciepe(
             'A Test Reciepe',
