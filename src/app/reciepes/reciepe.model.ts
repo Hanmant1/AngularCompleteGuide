@@ -6,7 +6,7 @@ export class Reciepe {
     public imagePath: string;
     public ingredient: Ingredient[]
 
-    constructor(name: string, desc: string, imagePath: string,ingredient: Ingredient[]){
+    constructor( name: string, desc: string, imagePath: string,ingredient: Ingredient[]){
         this.name = name;
         this.desc = desc;
         this.imagePath = imagePath;

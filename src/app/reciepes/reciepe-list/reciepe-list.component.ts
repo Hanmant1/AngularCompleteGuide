@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Reciepe } from '../reciepe.model';
 import { ReciepeService } from '../reciepe.service';
 
@@ -9,11 +10,17 @@ import { ReciepeService } from '../reciepe.service';
 })
 export class ReciepeListComponent implements OnInit {
   reciepes: Reciepe[];
-  constructor(private reciepeService: ReciepeService) {
+  constructor(private reciepeService: ReciepeService,
+    private router: Router,
+    private route: ActivatedRoute) {
     console.log(this.reciepes);
   }
 
   ngOnInit() {
     this.reciepes = this.reciepeService.getReciepes();
+  }
+
+  onNewReciepe() {
+    this.router.navigate(['new'],{relativeTo:this.route})
   }
 }
