@@ -8,7 +8,7 @@ import { ReciepeService } from '../reciepe.service';
   styleUrls: ['./reciepe-detail.component.css']
 })
 export class ReciepeDetailComponent implements OnInit {
-  private reciepe: Reciepe;
+  reciepe: Reciepe;
   private id: number;
   constructor(private reciepeService: ReciepeService,
     private route: ActivatedRoute, private router: Router) { }

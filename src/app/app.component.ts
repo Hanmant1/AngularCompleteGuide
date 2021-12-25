@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng4-complete-guide';
+  title = 'angular-complete-guide';
   loadedFeature: string = 'reciepe';
   navigate(selectedFeature: string) {
     
